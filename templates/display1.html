@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="{{ url_for('static', filename='js/papaparse.min.js') }}"></script>
+</head>
+<body>
+    <div class="blur"></div>
+    <div class="container">
+        <a href="{{url_for('igscraper')}}" class="back">
+            <div></div>
+            <h4>INSTAGRAM</h4>
+            <span>Back to Instagram Scraper</span>
+        </a>
+        <fieldset>
+            <legend>&nbsp; FILE INSTAGRAM &nbsp;</legend>
+            <form>
+                <div>
+                    <label>Scrapping {{file_csv}} Berhasil</label>
+                    <center><a href=static/hasil_ig/{{file_csv}}><button class="button">Download</a></center>
+                </div>
+                <br>
+            </form>
+        </fieldset> 
+        </div>
+</body>
+</html>

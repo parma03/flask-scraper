@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="{{ url_for('static', filename='js/papaparse.min.js') }}"></script>
+</head>
+<body>
+    <div class="blur"></div>
+    <div class="container">
+        <a href="{{url_for('ytscraper')}}" class="back">
+            <div></div>
+            <h4>YOUTUBE</h4>
+            <span>Back to Youtube Scraper</span>
+        </a>
+    <fieldset>
+        <legend>&nbsp; FILE YOUTUBE &nbsp;</legend>
+        <form>
+            <div>
+                <label>Scrapping {{filename}} Berhasil</label>
+                <center><a href=static/hasil_yt/{{filename}} target="_blank"><button class="button">Download</a></center>
+            </div>
+            <br>
+        </form>
+    </fieldset> 
+    </div>
+</body>
+</html>

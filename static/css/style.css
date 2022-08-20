@@ -1,0 +1,238 @@
+body{
+    background-image:url('../img/bg-index.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.button {
+  all: unset;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: #f0f0f0;
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button::after,
+.button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.button::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: #28282d;
+  border-radius: 10px;
+}
+
+.button::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #ffffff15;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.button:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.button:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.button:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#register {
+  width: 400px;
+}
+
+input {
+  padding: 3px;
+  box-shadow: 3px 3px 5px grey;
+  font-size: 14px;
+  font-weight: 600;
+  width: 300px;
+}
+
+label {
+  color: #00ffe5;
+  font-weight: bold;
+  display: block;
+}
+
+fieldset {
+  font-family: 'Permanent Marker', cursive;
+ font-size:1.5em;
+ line-height: 40px;
+   width: 65%;
+   padding: 30px;
+   margin: 90px auto;
+   border: white solid 2.5px;
+ -webkit-animation-name: color; /* Safari 4.0 - 8.0 */
+   -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+   -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+   animation-name: color;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes color {
+   from {color: white;}
+   to {color: yellow;}
+}
+
+/* Standard syntax */
+@keyframes color {
+   from {color: white;}
+   to {color: yellow;}
+}
+
+legend {
+ font-family: 'Permanent Marker', cursive;
+   font-size: 1.1em;
+ -webkit-animation-name: color; /* Safari 4.0 - 8.0 */
+   -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+   -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+   animation-name: color;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+}
+
+.blur {
+  background-image:url('../img/bg-index.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%; 
+  filter: blur(100px);
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+  width: auto;
+  text-align: center;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+}
+
+.back{
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0px 10px 10px 40px;
+}
+
+.back h4{
+  color: #f6ff00;
+  font-size: 16px;
+  transform: translateY(-5px);
+  transition: transform 500ms 0s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.back span{
+  opacity: 0;
+  color: #ff0000;
+  font-size: 18px;
+  font-weight: 300;
+  display: inline-block;
+  transform: translateY(-25px);
+  transition:
+    transform 500ms 0s cubic-bezier(0.2, 0, 0, 1),
+    opacity 500ms 0s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.back div{
+  top: 10px; 
+  left: 0;
+  content: '';
+  width: 30px;
+  height: 30px;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(1);
+  background-color: #E9E7F2;
+  transition: 
+    transform 400ms 0s cubic-bezier(0.2, 0, 0, 1.6);
+}
+
+.back div::after{
+  top: 0;
+  left: 0;
+  content: '';
+  width: 60px; 
+  height: 30px;
+  position: absolute;
+  background-position: 0 0;
+  background-image: url('https://s3-eu-west-1.amazonaws.com/thomascullen-codepen/back.svg');
+  transition: 
+    transform 400ms 0s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.back:hover h4{
+  color: #002fff;
+}
+
+.back:hover h4{
+    transform: translateY(-15px);
+}
+.back:hover span {
+  opacity: 1;
+  transform: translateY(-35px);
+}
+
+.back:hover div{
+  transform: scale(1.1);
+  background-color: white;
+  box-shadow:
+    0 2px 10px 0 rgba(185,182,198,0.00),
+    0 1px 3px 0 rgba(175,172,189,0.25);
+}
+
+.back:hover div::after{
+  transform: translateX(-30px);
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>{{title}}</title>
+</head>
+<body>
+    <div class="blur"></div>
+    <div class="container">
+        <a href="{{url_for('index')}}" class="back">
+            <div></div>
+            <h4>ANALYSIS</h4>
+            <span>Back to home</span>
+        </a>
+    <fieldset>
+        <legend>&nbsp; {{anatitle}} &nbsp;</legend>
+        <form method="post" action="{{url_for('filenama')}}" enctype="multipart/form-data">  
+            <label>Upload File Here:</label>
+            <input type="file" class="form-control" name="fileana" accept=".txt, .csv">
+            <br>
+            <center><button class="button" type="submit" , value='compareana!' >Submit</center>
+        </form>
+    </fieldset> 
+    </div>
+</body>
+</html>

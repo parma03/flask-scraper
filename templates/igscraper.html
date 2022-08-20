@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>{{title}}</title>
+</head>
+<body>
+    <div class="blur"></div>
+    <div class="container">
+        <a href="{{url_for('index')}}" class="back">
+            <div></div>
+            <h4>INSTAGRAM</h4>
+            <span>Back to home</span>
+        </a>
+    <fieldset>
+        <legend>&nbsp; {{igtitle}} &nbsp;</legend>
+        <form method="post" action="{{url_for('ig')}}">  
+            <label>Login Instagram:</label>
+            <input type="text" class="form-control" name="user_login" required>
+            <label>Password Instagram:</label>
+            <input type="password" class="form-control" name="user_pass" required>
+            <label>Instagram Username:</label>
+            <input class="form-control" name="ig_user">contoh: username1
+            <br>
+            <center><button class="button" type="submit" , value='compareig!' >Submit</center>
+        </form>
+    </fieldset> 
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>{{title}}</title>
+</head>
+<body>
+    <div class="blur"></div>
+    <div class="container">
+        <a href="{{url_for('index')}}" class="back">
+            <div></div>
+            <h4>YOUTUBE</h4>
+            <span>Back to home</span>
+        </a>
+    <fieldset>
+        <legend>&nbsp; {{yttitle}} &nbsp;</legend>
+        <form method="post" action="{{url_for('yt')}}">
+            <label>Youtube Link ID:</label>
+            <input class="form-control" name="yt_link" value="www.youtube.com/watch?v=(PASTE_HERE)">
+            <br>
+            <center><button class="button" type="submit" , value='compareyt!' >Submit</center>
+        </form>
+    </fieldset> 
+    </div>
+</body>
+</html>
